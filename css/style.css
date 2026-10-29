@@ -3,25 +3,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Esto asegura que el relleno y el borde no aumenten el tamaño de un elemento */
-  }
-  
-  /* Propiedad para un desplazamiento suave en las anclas */
-  html {
-  scroll-behavior: smooth; /* Hace que el desplazamiento al hacer clic en un enlace (ej: #menu)
-  sea una animación suave en lugar de un salto brusco. */
-  }
-  
-  body {
+}
+
+/* Propiedad para un desplazamiento suave en las anclas */
+html {
+  scroll-behavior: smooth; /* Hace que el desplazamiento al hacer clic en un enlace (ej: #menu) sea una animación suave en lugar de un salto brusco. */
+}
+
+body {
   line-height: 1.6; /* Define la altura de cada línea de texto, para que no esté muy apretado. */
-  color: #000000;
-  background-color: #EEE3C8;
+  color: #594638;
+  background-color: #F5F0E8;
   font-family: 'Fredoka', sans-serif;
-  }
-  
-  /* Estilos para el encabezado */
-  .headerVidaanimal {
-  background: #dcd5c4;
-  color: white;
+}
+
+/* Estilos para el encabezado */
+.headerVidaanimal {
+  background: #E8D2BE;
+  color: #594638;
   padding: 1rem 2rem;
   display: flex;
   position: fixed;
@@ -29,50 +28,51 @@
   align-items: center;
   width: 100%;
   z-index: 1000;
-  }
+}
 
- /* Estilos para el contenedor del logo y el título */
-  .logo {
+/* Estilos para el contenedor del logo y el título */
+.logo {
   display: flex;
   align-items: center;
   gap: 1rem;
-  }
-  
-  .logo img {
+}
+
+.logo img {
   border-radius: 100px;
   width: 150px;
   height: 90px;
-  }
-  
- .headerVidaanimal h1 {
+}
+
+.headerVidaanimal h1 {
   margin: 0;
-  } 
-  /* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
-  .nav ul {
+}
+
+/* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
+.nav ul {
   display: flex;
   list-style: none; /* Quita los puntos (viñetas) de la lista. */
-  gap: 15px; /*Espacio entre las secciones del menú nav */
-  }
-  
-  .nav-button {
-  background-color: #627466;
-  color: #fcf9f9;
+  gap: 15px; /* Espacio entre las secciones del menú nav */
+}
+
+.nav-button {
+  background-color: #788B73;
+  color: #FFFFFF;
   padding: 10px 20px;
   margin-left: 15px;
   border-radius: 10px;
-  border: 3px solid #5d6e5a;
+  border: 3px solid #465744;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .nav-button:hover {
-  background-color: #aca89a;
+}
+
+.nav-button:hover {
+  background-color: #B89B7D;
   transform: scale(1.05);
-  }
-  
-  /* Sección de inicio (Hero) */
-  .hero-Vidaanimal {
+}
+
+/* Sección de inicio (Hero) */
+.hero-Vidaanimal {
   position: relative;
   height: 100vh;
   max-height: 800px;
@@ -82,25 +82,23 @@
   text-align: center;
   padding-top: 230px;
   overflow: hidden;
-  }
+}
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #46574480;
+  z-index: 1;
+}
 
-  .hero::before {
-  content: '';              
-  position: absolute;      
-  top: 0; left: 0;          
-  width: 100%; height: 100%; 
-  background-color: #687c6c51; 
-  z-index: 1;            
-  }
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-
-  .hero-content {
-  position: relative; 
-  z-index: 2;         
-  }
-   
-  .video-background {
+.video-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,264 +107,258 @@
   z-index: -1; /* detrás del texto */
   overflow: hidden;
   background: no-repeat center center/cover;
-  }
+}
 
-
-  
-  .video-background video {
+.video-background video {
   width: 100%;
   height: 100%;
   object-fit: cover; /* el video se adapta a todo el fondo */
-  pointer-events: none; /* evita clics encima */          
-  }
+  pointer-events: none; /* evita clics encima */
+}
 
-
-  .hero-content h2 {
+.hero-content h2 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  color: white;
-  background-color: #545e528f;
+  color: #FFFFFF;
+  background-color: #465744CC;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 50px;
-  }
-  
-  .hero-content p {
+}
+
+.hero-content p {
   font-size: 1.4rem;
-  color: white;
+  color: #FFFFFF;
   margin-bottom: 2rem;
-  }
-  
-  /* Estilos para el contenedor de los botones del hero */
-  .hero-buttons {
+}
+
+/* Estilos para el contenedor de los botones del hero */
+.hero-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
   font-weight: bold;
-  }
-  
-  /* Estilos para los botones de adopción y shop */
-  .btn {
+}
+
+/* Estilos para los botones de adopción y shop */
+.btn {
   display: inline-block;
-  background: #5f6b5e;
-  color: white;
+  background: #788B73;
+  color: #FFFFFF;
   padding: 0.8rem 1.5rem;
-  border: 3px solid #556e53;
+  border: 3px solid #465744;
   border-radius: 15px;
   text-decoration: none;
   transition: background 0.3s, border-color 0.3s;
-  }
-  .btn:hover {
-  background: transparent;
-  color: #b6b095;
-  border-color: #EEE3C8;
-  }
+}
 
-    /* Estilos para todas las secciones principales */
-  main section {
+.btn:hover {
+  background: transparent;
+  color: #E8D2BE;
+  border-color: #F5F0E8;
+}
+
+/* Estilos para todas las secciones principales */
+main section {
   padding: 50px 20px;
   margin: 0 auto;
   text-align: center;
-  }
+}
 
 /* Sección quienes somos */
-  .fundación{
-  background-color: #eed7ad;
-  }
-  
-  .fundación h2 {
+.fundación{
+  background-color: #E8D2BE;
+}
+
+.fundación h2 {
   margin-bottom: 20px;
-  }
-  
-  .fundación .content {
+}
+
+.fundación .content {
   max-width: 800px;
   margin: 0 auto;
-  }
-/* Sección de Programas, proyecto de la funvida animal y botones de filtro */
-  .Animales {
-  background-color: #fcfcfb;
-  }
-  
-  .Animales h2 {
+}
+
+/* Sección de Programas, proyecto de la fundación animal y botones de filtro */
+.Animales {
+  background-color: #F5F0E8;
+}
+
+.Animales h2 {
   margin-bottom: 20px;
-  }
-  
-  .filter-buttons {
+}
+
+.filter-buttons {
   margin-bottom: 30px;
-  }
-  
-  .filter-btn {
-  background-color: #251D82;
-  border: 3px solid #b9ddff;
-  color: rgb(186, 167, 167);
+}
+
+.filter-btn {
+  background-color: #788B73;
+  border: 3px solid #465744;
+  color: #FFFFFF;
   font-weight: bold;
   padding: 10px 20px;
   margin: 0 5px;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .filter-btn:hover, .filter-btn.active {
-  background-color: #b9ddff;
-  color: #333;
-  border: 3px solid #251D82;
-  transform: scale(1.05);
-  }
+}
 
-  /* Estilos para el contenedor de la galería de XXXX */
-  #Animaless-container {
+.filter-btn:hover, .filter-btn.active {
+  background-color: #B89B7D;
+  color: #594638;
+  border: 3px solid #465744;
+  transform: scale(1.05);
+}
+
+/* Estilos para el contenedor de la galería de XXXX */
+#Animaless-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  }
-  
-  /* Estilos para cada tarjeta  (generada por JS) */
-  .Perros-card {
-  border: 2px solid #c5bd9f;
+}
+
+/* Estilos para cada tarjeta (generada por JS) */
+.Perros-card {
+  border: 2px solid #B89B7D;
   border-radius: 10px;
   padding: 15px;
   width: 250px;
-  background-color: #aba288;
+  background-color: #FFFFFF;
   text-align: center;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 8px rgba(70,87,68,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
   /* Nuevo: para mejor control del diseño interno */
   display: flex;
   flex-direction: column;
-  }
-  
-  .Perros-card:hover {
+}
+
+.Perros-card:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
-  }
-  
-  .Perros-card img {
+  box-shadow: 4px 4px 12px rgba(70,87,68,0.3);
+}
+
+.Perros-card img {
   width: 100%;
   height: 197px;
   object-fit:cover;
   border-radius: 10px;
   margin-bottom: 10px;
-  }
-  
-  .Perros-card figcaption {
+}
+
+.Perros-card figcaption {
   font-size: 1rem;
-  color: #333;
+  color: #594638;
   font-weight: bold;
-  }
-  
-  /* Estilo para mostrar la descripción completa */
-  .card-description {
+}
+
+/* Estilo para mostrar la descripción completa */
+.card-description {
   margin-top: 10px;
   text-align: left;
   font-size: 0.9rem;
-  color: #515050;
+  color: #6F6256;
   line-height: 1.4;
   /* Esto es clave para que se muestre */
   display: block;
-  }
-  
-  
-  /* Estilos para el slider de fotos */
-  /* Estilos para el slider */
-  /* Three image containers (use 25% for four, and 50% for two, etc) */
-  .column {
+}
+
+/* Estilos para el slider de fotos */
+/* Estilos para el slider */
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
   float: left;
   width: 33.33%;
   padding: 10px;
-  }
-  
-  .column img {
-  border: 7px solid #251D82;
+}
+
+.column img {
+  border: 7px solid #788B73;
   border-radius: 15px;
-  }
+}
 
-
-  .row h3 {
+.row h3 {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-  }
+}
 
-
-  /* Clear floats after image containers */
-  .row::after {
+/* Clear floats after image containers */
+.row::after {
   content: "";
   clear: both;
   display: table;
-  }
+}
 
-
-   /* Pie de página (footer) */
-  footer {
-  background-color:#EEE3C8;
-;
-  color: #ffffff;
+/* Pie de página (footer) */
+footer {
+  background-color: #B89B7D;
+  color: #FFFFFF;
   padding: 40px 20px 20px;
   text-align: center;
   font-family: 'Fredoka', sans-serif;
-  }
-  
-  .footer-grid {
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
   max-width: 800px;
   margin: 0 auto 20px;
   text-align: left;
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
   .footer-grid {
-  grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
-  }
-  
-  .contacto-VidaAnimal, .redes-sociales {
+}
+
+.contacto-VidaAnimal, .redes-sociales {
   padding: 0 10px;
-  }
-  
-  .contacto-VidaAnimal h3, .redes-sociales h3 {
+}
+
+.contacto-VidaAnimal h3, .redes-sociales h3 {
   font-size: 1.2rem;
   margin-bottom: 15px;
-  }
-  
-  .contacto-VidaAnimal address p {
+}
+
+.contacto-VidaAnimal address p {
   margin: 5px 0;
-  }
-  
-  .contacto-VidaAnimal a {
-  color: #EEE3C8;
+}
+
+.contacto-VidaAnimal a {
+  color: #F5F0E8;
   text-decoration: none;
   transition: color 0.3s;
-  }
-  
-  .contacto-VidaAnimal a:hover {
+}
+
+.contacto-VidaAnimal a:hover {
   text-decoration: underline;
-  }
-  
-  .redes-iconos a {
-  color: #ffffff;
+}
+
+.redes-iconos a {
+  color: #FFFFFF;
   margin: 0 10px;
   font-size: 24px;
   transition: color 0.3s;
-  }
-  
-  .redes-iconos a:hover {
-  color: #e1d69c;
-  }
-  
-  .footer-bottom {
-  border-top: 1px solid #d7cc86;
+}
+
+.redes-iconos a:hover {
+  color: #E8D2BE;
+}
+
+.footer-bottom {
+  border-top: 1px solid #E8D2BE;
   padding-top: 20px;
   position: relative;
-  }
-  
-  .scroll-to-top-btn {
-  background-color: #EEE3C8;
+}
+
+.scroll-to-top-btn {
+  background-color: #E8D2BE;
   border: none;
-  color: #333;
+  color: #594638;
   padding: 10px 15px;
   border-radius: 50%;
   cursor: pointer;
@@ -375,14 +367,14 @@
   left: 50%;
   transform: translateX(-50%);
   transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .scroll-to-top-btn:hover {
-  background-color: #EEE3C8;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #F5F0E8;
   transform: translateX(-50%) scale(1.1);
-  }
-  
-  .copyright {
+}
+
+.copyright {
   font-size: 0.8rem;
   margin: 0;
-  }
+}
